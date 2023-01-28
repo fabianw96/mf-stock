@@ -5,5 +5,17 @@ export const useItemStore = defineStore('itemStore', {
     items: [],
   }),
   getters: {},
-  actions: {},
+  actions: {
+    async getItemsFromServer() {
+      const client = useSupabaseClient();
+
+      const { data } = await useAsyncData('items', async () => {
+        const { data } = await client.from('items').select();
+        return { data };
+      });
+      console.log(data);
+
+      this.items = data;
+    },
+  },
 });

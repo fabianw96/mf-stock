@@ -1,7 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <LoginCard></LoginCard>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup>
+const user = useSupabaseUser();
+const { auth } = useSupabaseClient();
 
-<style scoped></style>
+watchEffect(() => {
+  if (user.value) {
+    navigateTo('/list');
+  }
+});
+</script>

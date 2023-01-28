@@ -1,0 +1,26 @@
+{
+  "cart": [],
+  "items": [
+    {
+      "id": 1,
+      "name": "Item 1",
+      "price": 100,
+      "uri": "https://www.meine-hautapotheke.de/details/skinceuticals-c-e-ferulic-serum/1982353.html",
+      "img": "https://www.meine-hautapotheke.de/shop/products/P1982353.JPG"
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "price": 200,
+      "uri": "https://www.meine-hautapotheke.de/details/skinceuticals-c-e-ferulic-serum/1982353.html",
+      "img": "https://www.meine-hautapotheke.de/shop/products/P1982353.JPG"
+    },
+    {
+      "id": 3,
+      "name": "Item 3",
+      "price": 300,
+      "uri": "https://www.meine-hautapotheke.de/details/skinceuticals-c-e-ferulic-serum/1982353.html",
+      "img": "https://www.meine-hautapotheke.de/shop/products/P1982353.JPG"
+    }
+  ]
+}
