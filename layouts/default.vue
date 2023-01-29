@@ -1,7 +1,7 @@
 <template>
   <div class="m-3 p-2 flex justify-center align-middle">
     <div>
-      <NuxtLink to="/" class="btn">Home</NuxtLink>
+      <NuxtLink to="/" class="homebtn">Home</NuxtLink>
     </div>
   </div>
   <div>
@@ -17,7 +17,7 @@ itemStore.getItemsFromServer();
 </script>
 
 <style scoped>
-.btn {
+.homebtn {
   font-size: 18px;
   color: #e1e1e1;
   font-family: inherit;
@@ -32,18 +32,18 @@ itemStore.getItemsFromServer();
   transition-property: color;
 }
 
-.btn:focus,
-.btn:hover {
+.homebtn:focus,
+.homebtn:hover {
   color: #fff;
 }
 
-.btn:focus:after,
-.btn:hover:after {
+.homebtn:focus:after,
+.homebtn:hover:after {
   width: 100%;
   left: 0%;
 }
 
-.btn:after {
+.homebtn:after {
   content: '';
   pointer-events: none;
   bottom: -2px;

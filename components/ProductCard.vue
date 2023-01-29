@@ -1,15 +1,19 @@
 <template>
   <div class="card text-white p-8 mx-64 my-10">
-    <div class="flex justify-around">
+    <div class="grid grid-cols-3 grid-rows-none">
       <a
         :href="item.uri"
         class="hover:text-primary hover:underline transition-all duration-500"
         >{{ item.name }}</a
       >
-      <button @click="itemStore.increaseQuantity(item)">+</button>
-      <p>{{ item.quantity }}</p>
-      <button @click="">-</button>
-      <span>{{ item.quantity * item.price }} Euro</span>
+      <div class="flex justify-center gap-4">
+        <button @click="itemStore.increaseQuantity(item)">+</button>
+        <p class="self-center">{{ item.quantity }}</p>
+        <button @click="">-</button>
+      </div>
+      <span class="self-center text-right"
+        >{{ item.quantity * item.price }} Euro</span
+      >
     </div>
   </div>
 </template>

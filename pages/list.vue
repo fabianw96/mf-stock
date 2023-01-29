@@ -1,9 +1,13 @@
 <template>
   <div>
-    <div v-for="item in itemStore.items">
-      {{ item.name }}
+    <div class="flex justify-center">
+      <button class="btn" @click="logOut">Sign Out</button>
     </div>
-    <button @click="logOut">Sign Out</button>
+    <ul>
+      <li v-for="item in itemStore.items" :key="item.id">
+        <ProductCard :item="item" />
+      </li>
+    </ul>
   </div>
 </template>
 
