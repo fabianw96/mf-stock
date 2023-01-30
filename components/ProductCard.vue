@@ -9,7 +9,7 @@
       <div class="flex justify-center gap-4">
         <button @click="itemStore.increaseQuantity(item)">+</button>
         <p class="self-center">{{ item.quantity }}</p>
-        <button @click="">-</button>
+        <button @click="itemStore.decreaseQuantity(item)">-</button>
       </div>
       <span class="self-center text-right"
         >{{ item.quantity * item.price }} Euro</span
@@ -30,5 +30,6 @@ const { item } = defineProps(['item']);
   border-radius: 100px;
   background: #111827;
   box-shadow: -40px 40px 80px #0e131f, 40px -40px 80px #141d2f;
+  overflow: hidden;
 }
 </style>

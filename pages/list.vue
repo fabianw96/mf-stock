@@ -1,8 +1,9 @@
 <template>
   <div>
-    <div class="flex justify-center">
+    <div class="flex justify-evenly m-4">
       <button class="btn" @click="logOut">Sign Out</button>
     </div>
+    <ItemForm></ItemForm>
     <ul>
       <li v-for="item in itemStore.items" :key="item.id">
         <ProductCard :item="item" />
