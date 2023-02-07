@@ -57,6 +57,7 @@ const parseItem = () => {
     quantity: quantity.value,
     uri: uri.value,
   };
+  itemStore.items.push(newItem.value);
   itemStore.addItem(newItem.value);
 };
 </script>
