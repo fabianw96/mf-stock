@@ -10,7 +10,7 @@ export const useItemStore = defineStore('itemStore', {
       const client = useSupabaseClient();
       const { data } = await client.from('items').select();
       this.items = data;
-      console.log(data);
+      // console.log(data);
     },
     async addItem(itemData) {
       const client = useSupabaseClient();
@@ -58,6 +58,13 @@ export const useItemStore = defineStore('itemStore', {
       if (error) {
         console.log(error);
       }
+    },
+    async deleteItem(item) {
+      const client = useSupabaseClient();
+
+      await client.from('items').delete().eq('id', item.id);
+
+      this.items = this.items.filter((i) => i.id !== item.id);
     },
   },
 });
